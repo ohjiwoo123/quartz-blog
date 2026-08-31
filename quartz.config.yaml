@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: ohjiwoo123.github.io
+  baseUrl: ohjiwoo123.github.io/quartz-blog
   ignorePatterns:
     - private
     - templates

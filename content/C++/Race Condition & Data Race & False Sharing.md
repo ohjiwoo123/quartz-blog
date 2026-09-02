@@ -150,6 +150,8 @@ False Sharing이 있는 경우,
 False Sharing이 없는 경우,
 2개의 쓰레드로 0부터 1씩 1억번 더하는 시간이 `0.166599`초 굉장히 빠른 결과를 확인할 수 있다.
 
+![[Pasted image 20260902225853.png]]
+
 ```cpp
 std::thread t1(fn2,std::ref(nums),0,cout/2,std::ref(sums[0]));
 std::thread t2(fn2,std::ref(nums),cout/2,count,std::ref(sums[1]));
@@ -157,4 +159,5 @@ std::thread t2(fn2,std::ref(nums),cout/2,count,std::ref(sums[1]));
 fn2를 사용해도 False Sharing 문제를 회피할 수 있다.
 localSum 변수를 활용하여 회피됨.
 
-![[Pasted image 20260902225853.png]]
+![[Pasted image 20260902230357.png]]
+
